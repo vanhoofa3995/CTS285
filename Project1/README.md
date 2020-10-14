@@ -2,10 +2,14 @@ This folder holds all files associated with Project1.
 
 Currents files and their status:
 
-FallenFleet - In progress
+FallenFleet - Done
 
-Grid - In progress
+Grid - Done
 
 Location - Done
 
-Player - Not created
+Player - In Progress
+
+Randomizer - Bugged
+
+Ship - In Progress
