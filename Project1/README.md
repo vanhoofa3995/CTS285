@@ -8,8 +8,8 @@ Grid - Done
 
 Location - Done
 
-Player - In Progress
+Player - Done
 
-Randomizer - Bugged
+Randomizer - Done
 
-Ship - In Progress
+Ship - Done
