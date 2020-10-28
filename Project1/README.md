@@ -4,12 +4,12 @@ Currents files and their status:
 
 FallenFleet - In Progress
 
-Grid - Done
+Grid - In testing
 
-Location - Done
+Location - In testing
 
-Player - Done
+Player - In testing
 
-Randomizer - Done
+Randomizer - In testing
 
-Ship - Done
+Ship - In testing
