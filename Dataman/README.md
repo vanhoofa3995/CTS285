@@ -1,3 +1,4 @@
-#Dataman
-#README
-#WRITE THIS!
+This folder holds all files associated with Dataman.
+
+Currents files and their status:
+
