@@ -1,13 +1,13 @@
 /*
- * This program runs as a test file for the Dataman program.
+ * This program runs as an advanced version of the Dataman calculator.
  * Alexander T Van Hoof
- * 10/28/20
+ * 10/29/20
 */
-package dataman;
+package datamanv2;
 
 import java.util.Scanner;
 
-public class Testing {
+public class DatamanV2 {
 
     public static void main(String[] args)
     {
