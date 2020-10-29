@@ -3,58 +3,51 @@
  * Alexander T Van Hoof
  * 10/28/20
 */
+
 package dataman;
 
 import java.util.Scanner;
 
 public class Dataman {
-
     public static void main(String[] args) {
-         Scanner in = new Scanner(System.in);
-        double a, b, c = 0.0;
 
-        System.out.print("Enter your first number \n");
-        a = in.nextDouble();
-        System.out.print("And enter your second  \n");
-        b = in.nextDouble();
-        System.out.print("Choose the operation  " +
-              "\n1.Addition" +
-        		"\n2.Subtraction" +
-        		"\n3.Multiplication" +
-        		"\n4.Division" +
-        		"\n5.Power" +
-        		"\nPlease enter the number of operation \n");
-        double somethin = in.nextDouble();
-        double addition = 1;
-        double subtraction = 2;
-        double multiplication = 3;
-        double division = 4 ;
-        double power = 5;
-        if (somethin == addition) {
-        	c = a + b;  
-        	System.out.println(a + " + " + b + " = " + c);  }
-        else if (somethin == subtraction)  {
-        	c = a - b;  
-        	System.out.println(a + " - " + b + " = " + c);	}
-        else if (somethin == multiplication)	{
-        	c = a * b;   
-        	System.out.println(a + " * " + b + " = " + c);	}
-        else if (somethin == division)   {
-        	c = a / b;  
-        	System.out.println(a + " / " + b + " = " + c);	}
-        else if (somethin == power)	{
-        	System.out.println("Enhance A or B?" +
-        			"\n1.A" +
-        			"\n2.B");
-        	double enhance = in.nextDouble();
-        	double first = 1;
-        	double second = 2;
-        		if (enhance == first) {
-        			System.out.println(Math.pow(a, 2)); }	
-        		else if (enhance == second); {
-        			System.out.println(Math.pow(b, 2)); }
-        
+        Scanner reader = new Scanner(System.in);
+        System.out.print("Enter two numbers: ");
+
+        // nextDouble() reads the next double from the keyboard
+        double first = reader.nextDouble();
+        double second = reader.nextDouble();
+
+        System.out.print("Enter an operator (+, -, *, /): ");
+        char operator = reader.next().charAt(0);
+
+        double result;
+
+        switch(operator)
+        {
+            case '+':
+                result = first + second;
+                break;
+
+            case '-':
+                result = first - second;
+                break;
+
+            case '*':
+                result = first * second;
+                break;
+
+            case '/':
+                result = first / second;
+                break;
+
+            // operator doesn't match any case constant (+, -, *, /)
+            default:
+                System.out.printf("Error! operator is not correct.\n\n");
+                main(null);
+                return;
         }
+
+        System.out.printf("%.1f %c %.1f = %.1f\n", first, operator, second, result);
     }
-    
 }
