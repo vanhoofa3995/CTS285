@@ -1,14 +1,14 @@
 /*
- * This program runs as a Dataman calulator simulation.
+ * This program runs as a simple version of the Dataman calculator.
  * Alexander T Van Hoof
- * 10/28/20
+ * 10/29/20
 */
 
-package dataman;
+package datamanv1;
 
 import java.util.Scanner;
 
-public class Dataman {
+public class DatamanV1 {
     public static void main(String[] args) {
 
         Scanner reader = new Scanner(System.in);
