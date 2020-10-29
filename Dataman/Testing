@@ -1,0 +1,131 @@
+/*
+ * This program runs as a test file for the Dataman program.
+ * Alexander T Van Hoof
+ * 10/28/20
+*/
+package dataman;
+
+import java.util.Scanner;
+
+public class Testing {
+
+    public static void main(String[] args)
+    {
+        Scanner in = new Scanner(System.in);
+        double a, b, c = 0.0;
+        
+        //Welcome Post
+        System.out.print("Welcome to the Dataman calculator program.\n\n");
+        System.out.println("Would you like to?");
+
+        //Main menu
+        System.out.print("1. Add" +
+        		"\n2. Subtract" +
+        		"\n3. Divide" +
+        		"\n4. Multiply" +
+        		"\n5. Exit \n");
+        System.out.print("Choose an operation: \n");
+        
+        //Define variables
+        double somethin = in.nextDouble();
+        double addition = 1;
+        double subtraction = 2;
+        double division = 3;
+        double multiplication = 4 ;
+        double Exit = 5;
+        
+        //Exit option
+        if (somethin == Exit)	{
+        	System.out.println("Goodbye.");
+                System.exit(0);
+        }
+        
+        System.out.print("Enter a number: \n");
+        a = in.nextDouble();
+        System.out.print("Enter a second number: \n");
+        b = in.nextDouble();
+        
+        //Addition option
+        if (somethin == addition) {
+        	c = a + b;  
+        	System.out.println(a + " + " + b + " = " + c);  
+                System.out.print("\n1.Repeat" +
+        		"\n2.Main Menu \n");
+                System.out.print("Choose an operation: \n");
+                double next = in.nextDouble();
+                double repeat = 1;
+                double menu = 2;
+                
+                    if (next == repeat) {
+                        System.out.println(a + " + " + b + " = " + c);
+                        main(null);
+                    }
+                    else if (next == menu) {
+                        main(null);
+                    }
+        }
+        //Subtraction option
+        else if (somethin == subtraction)  {
+        	c = a - b;  
+        	System.out.println(a + " - " + b + " = " + c);
+                System.out.print("\n1.Repeat" +
+        		"\n2.Main Menu \n");
+                System.out.print("Choose an operation: \n");
+                double next = in.nextDouble();
+                double repeat = 1;
+                double menu = 2;
+                
+                    if (next == repeat) {
+                        System.out.println(a + " - " + b + " = " + c);
+                        main(null);
+                    }
+                    else if (next == menu) {
+                        main(null);
+                    }
+        }
+        //Multiplication option
+        else if (somethin == multiplication)	{
+        	c = a * b;   
+        	System.out.println(a + " * " + b + " = " + c);
+                System.out.print("\n1.Repeat" +
+        		"\n2.Main Menu \n");
+                System.out.print("Choose an operation: \n");
+                double next = in.nextDouble();
+                double repeat = 1;
+                double menu = 2;
+                
+                    if (next == repeat) {
+                        System.out.println(a + " * " + b + " = " + c);
+                        main(null);
+                    }
+                    else if (next == menu) {
+                        main(null);
+                    }
+        }
+        //Division option
+        else if (somethin == division)   {
+        	c = a / b;  
+        	System.out.println(a + " / " + b + " = " + c);
+                System.out.print("\n1.Repeat" +
+        		"\n2.Main Menu \n");
+                System.out.print("Choose an operation: \n");
+                double next = in.nextDouble();
+                double repeat = 1;
+                double menu = 2;
+                
+                    if (next == repeat) {
+                        System.out.println(a + " / " + b + " = " + c);
+                        main(null);
+                    }
+                    else if (next == menu) {
+                        main(null);
+                    }
+        }
+        //Exit option
+        else if (somethin == Exit)	{
+        	System.out.println("Goodbye.");
+                System.exit(0);
+              
+        }
+    }
+}
