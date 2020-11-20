@@ -1,0 +1,308 @@
+//------------------------------------------------------------------------------
+/* <editor-fold desc="~ COMMENTS ~">
+* This program runs as a simulation of the Dataman Calculator.
+* Alexander T Van Hoof
+* 11/11/20
+*/
+// </editor-fold>
+//------------------------------------------------------------------------------
+// <editor-fold desc="~ MAIN ~">
+//------------------------------------------------------------------------------
+// <editor-fold desc="~ PACKAGE ~">
+package datamanv2;
+// </editor-fold>
+//------------------------------------------------------------------------------
+// <editor-fold desc="~ IMPORTS ~">
+import java.util.Scanner;
+
+import java.text.NumberFormat;
+// </editor-fold>
+//------------------------------------------------------------------------------
+// <editor-fold desc="~ CLASS ~">
+public class DatamanV2 {
+
+    public static void main(String[] args)
+    {
+        Scanner in = new Scanner(System.in);
+        double a, b, c, answer;
+        double points = 0;
+        
+        // Sets up number formatting
+        NumberFormat formatter = NumberFormat.getNumberInstance();
+// </editor-fold>
+//------------------------------------------------------------------------------
+// <editor-fold desc="~ WELCOME ~">        
+        // Welcome Post
+        System.out.print("----------------------------------------------\n");
+        System.out.print("Welcome to the Dataman calculator program.\n");
+        System.out.print("----------------------------------------------\n");
+        System.out.println("Would you like to?");
+
+        // Main menu
+        System.out.print("1. Add" +
+        		"\n2. Subtract" +
+        		"\n3. Divide" +
+        		"\n4. Multiply" +
+        		"\n5. Exit \n");
+        System.out.print("Choose an operation: \n");
+// </editor-fold>
+//------------------------------------------------------------------------------
+// <editor-fold desc="~ VARIABLES ~">        
+        // Define variables
+        double somethin = in.nextDouble();
+        double addition = 1;
+        double subtraction = 2;
+        double division = 3;
+        double multiplication = 4;
+        double exit = 5;
+// </editor-fold>
+//------------------------------------------------------------------------------
+// <editor-fold desc="~ EXIT ~">
+        // Exit option
+        if (somethin == exit)	{
+        	System.out.println("Goodbye.");
+                System.exit(0);
+        }
+// </editor-fold>
+//------------------------------------------------------------------------------
+// <editor-fold desc="~ NEGATIVES ~">        
+        // Checks for negative values in a
+            System.out.print("Enter a number: \n");
+            a = in.nextDouble();
+            if (a <0) {
+                    System.out.print("---------------------------" 
+                            + "-------------------\n");
+                    System.out.println("Positive numbers only!");
+                    main(null);
+            }
+
+            // Checks for negative values in b
+            System.out.print("Enter a second number: \n");
+            b = in.nextDouble();
+            if (b <0) {
+                    System.out.print("---------------------------" 
+                            + "-------------------\n");
+                    System.out.println("Positive numbers only!");
+                    main(null);
+            }
+// </editor-fold>
+//------------------------------------------------------------------------------     
+// <editor-fold desc="~ ADDITION ~">
+        // Addition option
+        if (somethin == addition) {
+        	c = a + b;
+                // Checks for negative values in c
+                if (c <0) {
+                System.out.print("---------------------------" 
+                        + "-------------------\n");
+                System.out.println("You result was negative," 
+                        + " only positive numbers are allowed!");
+                main(null);
+                }
+                
+                System.out.println("Before viewing the solution, " 
+                        + "try to guess the answer for 10 points.");
+                System.out.print("Enter the answer to the problem: \n");
+                answer = in.nextDouble();
+                
+                if (answer == c) {
+                    points = points + 10;
+                    System.out.println("Great Job, you have " 
+                            + formatter.format(points) + " points!");
+                }
+                else {
+                    System.out.println("Sorry Incorrect!");
+                }
+                
+                System.out.print("Here's the solution to the problem.\n");
+        	System.out.println(formatter.format(a) + " + " 
+                        + formatter.format(b) + " = " 
+                        + formatter.format(c));  
+                System.out.print("\n1.Repeat" +
+        		"\n2.Main Menu \n");
+                System.out.print("Choose an operation: \n");
+                double next = in.nextDouble();
+                double repeat = 1;
+                double menu = 2;
+                
+                    if (next == repeat) {
+                        System.out.print("---------------------------" 
+                        + "-------------------\n");
+                        System.out.println(formatter.format(a) + " + " 
+                                + formatter.format(b) + " = " 
+                                + formatter.format(c));
+                        main(null);
+                    }
+                    else if (next == menu) {
+                        main(null);
+                    }
+        }
+// </editor-fold>
+//------------------------------------------------------------------------------
+// <editor-fold desc="~ SUBTRACTION ~">        
+        // Subtraction option
+        else if (somethin == subtraction)  {
+        	c = a - b;
+                // Checks for negative values in c
+                if (c <0) {
+                System.out.print("---------------------------" 
+                        + "-------------------\n");
+                System.out.println("You result was negative," 
+                        + " only positive numbers are allowed!");
+                main(null);
+                }
+                
+                System.out.println("Before viewing the solution, " 
+                        + "try to guess the answer for 10 points.");
+                System.out.print("Enter the answer to the problem: \n");
+                answer = in.nextDouble();
+                
+                if (answer == c) {
+                    points = points + 10;
+                    System.out.println("Great Job, you have " 
+                            + formatter.format(points) + " points!");
+                }
+                else {
+                    System.out.println("Sorry Incorrect!");
+                }
+                
+                System.out.print("Here's the solution to the problem.\n");
+        	System.out.println(formatter.format(a) + " - " 
+                        + formatter.format(b) + " = " 
+                        + formatter.format(c));
+                System.out.print("\n1.Repeat" +
+        		"\n2.Main Menu \n");
+                System.out.print("Choose an operation: \n");
+                double next = in.nextDouble();
+                double repeat = 1;
+                double menu = 2;
+                
+                    if (next == repeat) {
+                        System.out.print("---------------------------" 
+                        + "-------------------\n");
+                        System.out.println(formatter.format(a) + " - " 
+                                + formatter.format(b) + " = " 
+                                + formatter.format(c));
+                        main(null);
+                    }
+                    else if (next == menu) {
+                        main(null);
+                    }
+        }
+// </editor-fold>
+//------------------------------------------------------------------------------        
+// <editor-fold desc="~ MULTIPLICATION ~"> 
+        // Multiplication option
+        else if (somethin == multiplication)	{
+        	c = a * b;
+                // Checks for negative values in c
+                if (c <0) {
+                System.out.print("---------------------------" 
+                        + "-------------------\n");
+                System.out.println("You result was negative," 
+                        + " only positive numbers are allowed!");
+                main(null);
+                }
+                
+                System.out.println("Before viewing the solution, " 
+                        + "try to guess the answer for 10 points.");
+                System.out.print("Enter the answer to the problem: \n");
+                answer = in.nextDouble();
+                
+                if (answer == c) {
+                    points = points + 10;
+                    System.out.println("Great Job, you have " 
+                            + formatter.format(points) + " points!");
+                }
+                else {
+                    System.out.println("Sorry Incorrect!");
+                }
+                
+                System.out.print("Here's the solution to the problem.\n");
+        	System.out.println(formatter.format(a) + " * " 
+                        + formatter.format(b) + " = " 
+                        + formatter.format(c));
+                System.out.print("\n1.Repeat" +
+        		"\n2.Main Menu \n");
+                System.out.print("Choose an operation: \n");
+                double next = in.nextDouble();
+                double repeat = 1;
+                double menu = 2;
+                
+                    if (next == repeat) {
+                        System.out.print("---------------------------" 
+                        + "-------------------\n");
+                        System.out.println(formatter.format(a) + " * " 
+                                + formatter.format(b) + " = " 
+                                + formatter.format(c));
+                        main(null);
+                    }
+                    else if (next == menu) {
+                        main(null);
+                    }
+        }
+// </editor-fold>
+//------------------------------------------------------------------------------        
+// <editor-fold desc="~ DIVISION ~"> 
+        // Division option
+        else if (somethin == division)   {
+        	c = a / b;
+                // Checks for negative values in c
+                if (c <0) {
+                System.out.print("---------------------------" 
+                        + "-------------------\n");
+                System.out.println("You result was negative," 
+                        + " only positive numbers are allowed!");
+                main(null);
+                }
+                
+                System.out.println("Before viewing the solution, " 
+                        + "try to guess the answer for 10 points.");
+                System.out.print("Enter the answer to the problem: \n");
+                answer = in.nextDouble();
+                
+                if (answer == c) {
+                    points = points + 10;
+                    System.out.println("Great Job, you have " 
+                            + formatter.format(points) + " points!");
+                }
+                else {
+                    System.out.println("Sorry Incorrect!");
+                }
+                
+                System.out.print("Here's the solution to the problem.\n");
+        	System.out.println(formatter.format(a) + " / " 
+                        + formatter.format(b) + " = " 
+                        + formatter.format(c));
+                System.out.print("\n1.Repeat" +
+        		"\n2.Main Menu \n");
+                System.out.print("Choose an operation: \n");
+                double next = in.nextDouble();
+                double repeat = 1;
+                double menu = 2;
+                
+                    if (next == repeat) {
+                        System.out.print("---------------------------" 
+                        + "-------------------\n");
+                        System.out.println(formatter.format(a) + " / " 
+                                + formatter.format(b) + " = " 
+                                + formatter.format(c));
+                        main(null);
+                    }
+                    else if (next == menu) {
+                        main(null);
+                    }
+        }
+// </editor-fold>
+//------------------------------------------------------------------------------
+// <editor-fold desc="~ EXIT ~">
+        // Exit option
+        else if (somethin == exit)	{
+        	System.out.println("Goodbye.");
+                System.exit(0);              
+        }
+    }
+}
+// </editor-fold>
+// </editor-fold>
+//------------------------------------------------------------------------------
