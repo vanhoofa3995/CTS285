@@ -1,0 +1,14 @@
+/*
+ * This program runs as a simulation of the Dataman Calculator.
+ * Alexander T Van Hoof
+ * 12/7/20
+ */
+package datamanfv;
+
+public class DatamanFV {
+
+  public static void main(String[] args) {
+    InputHandler inputHandler = new InputHandler();
+    inputHandler.start();
+    }
+}
